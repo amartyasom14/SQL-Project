@@ -25,7 +25,7 @@ Five core analyses, each in its own SQL file:
 ## Repository Structure
 
 ```
-SQL Project/
+sql-data-analyst-job-market-analysis/
 ├── csv_files/
 │   ├── company_dim.csv
 │   ├── job_postings_fact.csv
