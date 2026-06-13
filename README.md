@@ -23,3 +23,72 @@ Five core analyses, each in its own SQL file:
 ---
 
 ## Repository Structure
+
+```
+SQL Project/
+├── csv_files/
+│   ├── company_dim.csv
+│   ├── job_postings_fact.csv
+│   ├── skills_dim.csv
+│   └── skills_job_dim.csv
+├── sql_load/
+│   ├── 1_create_database.sql
+│   ├── 2_create_tables.sql
+│   └── 3_modify_tables.sql
+├── Project_sql/
+│   ├── 1_top_paying_jobs.sql
+│   ├── 2_top_paying_job_skills.sql
+│   ├── 3_top_demanded_skills.sql
+│   ├── 4_top_paying_skills.sql
+│   └── 5_optimal_skills.sql
+├── skill_salary_scatter.png
+├── top_skills_analysis.png
+└── README.md
+```
+
+---
+
+## Tools Used
+
+- **PostgreSQL** — database setup and all querying
+- **Python** — data cleaning and visualizations
+- **Excel** — initial data exploration
+- **Git / GitHub** — version control
+
+---
+
+## Dataset
+
+Four tables with a relational structure:
+
+```
+job_postings_fact  -->  skills_job_dim  -->  skills_dim
+job_postings_fact  -->  company_dim
+```
+
+Job postings include title, company, location, salary, and employment type. The skills tables map individual skills to each posting.
+
+---
+
+## Key Findings
+
+**Demand:** SQL is the most consistently requested skill across postings. Python and data visualization tools follow closely, with cloud platforms becoming increasingly common.
+
+**Salary:** Specialization pays. Niche technical skills — particularly those tied to automation or scalable data infrastructure — command significantly higher salaries than general tools, even when demand is lower.
+
+**Optimal skills (the sweet spot):** Skills in the upper-right of the scatter plot — high demand *and* high pay — are SQL, Python, and certain BI/cloud tools. These represent the clearest ROI for someone building a DA skillset.
+
+---
+
+## Visualizations
+
+- [`top_skills_analysis.png`](./top_skills_analysis.png) — demand rankings
+- [`skill_salary_scatter.png`](./skill_salary_scatter.png) — demand vs. salary by skill
+
+---
+
+## How to Run
+
+1. Set up PostgreSQL and run the files in `sql_load/` in order
+2. Import the CSVs from `csv_files/`
+3. Run queries from `Project_sql/` — each file is self-contained
