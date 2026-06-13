@@ -6,7 +6,7 @@ An end-to-end SQL project analyzing real-world job posting data to answer a prac
 
 ## Background
 
-When I started exploring DA roles, I kept running into vague advice about what to learn. This project came from wanting a data-driven answer — not opinions. I pulled job posting data into PostgreSQL and wrote queries to find which skills appear most often, which ones pay the most, and where those two sets overlap.
+When I started exploring DA roles, I kept running into vague advice about what to learn. This project came from wanting a data-driven answer, not opinions. I pulled job posting data into PostgreSQL and wrote queries to find which skills appear most often, which ones pay the most, and where those two sets overlap.
 
 ---
 
@@ -76,7 +76,7 @@ Job postings include title, company, location, salary, and employment type. The 
 
 **Salary:** Specialization pays. Niche technical skills — particularly those tied to automation or scalable data infrastructure — command significantly higher salaries than general tools, even when demand is lower.
 
-**Optimal skills (the sweet spot):** Skills in the upper-right of the scatter plot — high demand *and* high pay — are SQL, Python, and certain BI/cloud tools. These represent the clearest ROI for someone building a DA skillset.
+**Optimal skills:** Skills in the upper-right of the scatter plot — high demand *and* high pay — are SQL, Python, and certain BI/cloud tools. These represent the clearest ROI for someone building a DA skillset.
 
 ---
 
